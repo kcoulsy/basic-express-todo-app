@@ -1,3 +1,117 @@
+/* css variables */
+
+:root {
+  --color-primary: #f9ed69;
+  --color-secondary: #f08a5d;
+  --color-tertiary: #b83b5e;
+  --color-quaternary: #575787;
+  --color-quinary-hover: #3c3c6e;
+  --color-quinary: #2e2e57;
+  --color-white: #fff;
+  --color-off-white: #f1f1f1c7;
+  --color-dark: #171522;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
 body {
-  font-family: "Arial Narrow", Arial, "Helvetica Condensed", Helvetica, sans-serif;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: var(--breakpoint-sm);
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: var(--breakpoint-md);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: var(--breakpoint-lg);
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.todos__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todos__item {
+  align-items: center;
+  background-color: var(--color-quinary);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: var(--spacing-xs);
+  padding: var(--spacing-md);
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.todos__item:hover {
+  background-color: var(--color-quinary-hover);
+}
+
+.todos__form {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--spacing-md);
+}
+
+.todos__form--label {
+  outline: none !important;
+  flex: 1;
+}
+
+.todos__form--input {
+  outline: none !important;
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 0px;
+  background: var(--color-quinary);
+  color: var(--color-white);
+}
+
+::placeholder {
+  color: var( --color-off-white);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: var( --color-off-white);
+}
+
+.todos__form--button {
+  outline: none !important;
+  padding: var(--spacing-sm);
+  border: 0px;
+  background: var(--color-quaternary);
+  color: var(--color-white);
+  cursor: pointer;
 }

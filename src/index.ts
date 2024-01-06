@@ -20,9 +20,11 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.post("/todos", (req: Request, res: Response) => {
-  createTodo({
-    title: req.body.title,
-  });
+  if (req.body.title) {
+    createTodo({
+      title: req.body.title,
+    });
+  }
 
   res.redirect("/");
 });
@@ -34,7 +36,9 @@ app.get("/todos/:id", (req: Request, res: Response) => {
     throw new NotFoundError("Todo not found");
   }
 
-  res.render("todo", { todo });
+  const humanReadableDate = new Date(todo.createdAt).toLocaleString("en-GB");
+
+  res.render("todo", { todo, date: humanReadableDate });
 });
 
 app.use(function (

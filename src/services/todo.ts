@@ -6,13 +6,7 @@ interface Todo {
   createdAt: Date;
 }
 
-const todos: Todo[] = [
-  {
-    id: "1",
-    title: "Learn TypeScript",
-    createdAt: new Date(),
-  },
-];
+const todos: Todo[] = [];
 
 export function getTodos() {
   return todos;

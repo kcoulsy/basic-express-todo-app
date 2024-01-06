@@ -1,19 +1,25 @@
 {{#> layout }}
   <h1>Todos</h1>
-  <form action="/todos" method="post">
-    <label for="title"/>
-    <input type="text" name="title" id="title" placeholder="Enter a todo title" />
-    <button type="submit">Add Todo</button>
+  <form action="/todos" method="post" class="todos__form">
+    <label for="title" class="todos__form--label">
+      <input type="text" name="title" id="title" placeholder="Enter a todo title" class="todos__form--input" />
+    </label>
+    <button type="submit" class="todos__form--button">Add Todo</button>
   </form>
-  <p>Here are a list of your todos.</p>
-  <ul class="todos__list">
-    {{#each todos}}
-      <li>
-        <a href="/todos/{{id}}">
-        {{title}}
-        </a>
-      </li>
-    {{/each}}
-  </ul>
+
+  {{#if todos.length}}
+    <p>Here are a list of your todos:</p>
+    <ul class="todos__list">
+      {{#each todos}}
+        <li>
+          <a href="/todos/{{id}}" class="todos__item">
+            {{title}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>You have no todos.</p>
+  {{/if}}
 
 {{/layout}}
