@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import hbs from "hbs";
+import { getTodos } from "./services/todo";
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
@@ -11,7 +12,8 @@ app.set("views", __dirname + "/views");
 app.use(express.static("src/public"));
 
 app.get("/", (req: Request, res: Response) => {
-  res.render("index");
+  const todos = getTodos();
+  res.render("index", { todos });
 });
 
 app.listen(port, () => {

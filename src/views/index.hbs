@@ -1,3 +1,10 @@
 {{#> layout }}
-Hello from index.hbs yoo hello
+  <h1>Todos</h1>
+  <p>Here are a list of your todos.</p>
+  <ul class="todos__list">
+    {{#each todos}}
+      <li>{{title}}</li>
+    {{/each}}
+  </ul>
+
 {{/layout}}
