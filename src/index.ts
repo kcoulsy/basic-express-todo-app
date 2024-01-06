@@ -41,6 +41,10 @@ app.get("/todos/:id", (req: Request, res: Response) => {
   res.render("todo", { todo, date: humanReadableDate });
 });
 
+app.get("/*", (req: Request, res: Response) => {
+  throw new NotFoundError("Page not found");
+});
+
 app.use(function (
   err: unknown,
   req: Request,
