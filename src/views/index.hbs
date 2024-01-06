@@ -1,9 +1,18 @@
 {{#> layout }}
   <h1>Todos</h1>
+  <form action="/todos" method="post">
+    <label for="title"/>
+    <input type="text" name="title" id="title" placeholder="Enter a todo title" />
+    <button type="submit">Add Todo</button>
+  </form>
   <p>Here are a list of your todos.</p>
   <ul class="todos__list">
     {{#each todos}}
-      <li>{{title}}</li>
+      <li>
+        <a href="/todos/{{id}}">
+        {{title}}
+        </a>
+      </li>
     {{/each}}
   </ul>
 
