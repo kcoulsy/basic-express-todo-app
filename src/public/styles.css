@@ -77,12 +77,12 @@ a, a:visited, a:hover, a:active {
   margin-bottom: var(--spacing-md);
 }
 
-.todos__form--label {
+.todos__form__label {
   outline: none !important;
   flex: 1;
 }
 
-.todos__form--input {
+.todos__form__input {
   outline: none !important;
   width: 100%;
   padding: var(--spacing-sm);
@@ -100,7 +100,7 @@ a, a:visited, a:hover, a:active {
   color: var( --color-off-white);
 }
 
-.todos__form--button {
+.todos__form__button {
   outline: none !important;
   padding: var(--spacing-sm);
   border: 0px;

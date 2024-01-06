@@ -1,10 +1,10 @@
 {{#> layout }}
   <h1>Todos</h1>
   <form action="/todos" method="post" class="todos__form">
-    <label for="title" class="todos__form--label">
-      <input type="text" name="title" id="title" placeholder="Enter a todo title" class="todos__form--input" />
+    <label for="title" class="todos__form__label">
+      <input type="text" name="title" id="title" placeholder="Enter a todo title" class="todos__form__input" />
     </label>
-    <button type="submit" class="todos__form--button">Add Todo</button>
+    <button type="submit" class="todos__form__button">Add Todo</button>
   </form>
 
   {{#if todos.length}}
