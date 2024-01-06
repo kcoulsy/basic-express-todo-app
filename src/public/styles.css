@@ -1,12 +1,9 @@
 /* css variables */
 
 :root {
-  --color-primary: #f9ed69;
-  --color-secondary: #f08a5d;
-  --color-tertiary: #b83b5e;
-  --color-quaternary: #575787;
-  --color-quinary-hover: #3c3c6e;
-  --color-quinary: #2e2e57;
+  --color-primary: #575787;
+  --color-secondary: #2e2e57;
+  --color-tertiary: #3c3c6e;
   --color-white: #fff;
   --color-off-white: #f1f1f1c7;
   --color-dark: #171522;
@@ -14,14 +11,10 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
 
-  --spacing-xxs: 0.25rem;
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
 }
 
 body {
@@ -64,7 +57,7 @@ a, a:visited, a:hover, a:active {
 
 .todos__item {
   align-items: center;
-  background-color: var(--color-quinary);
+  background-color: var(--color-secondary);
   border-radius: 0.25rem;
   display: flex;
   justify-content: space-around;
@@ -75,7 +68,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .todos__item:hover {
-  background-color: var(--color-quinary-hover);
+  background-color: var(--color-tertiary);
 }
 
 .todos__form {
@@ -94,7 +87,7 @@ a, a:visited, a:hover, a:active {
   width: 100%;
   padding: var(--spacing-sm);
   border: 0px;
-  background: var(--color-quinary);
+  background: var(--color-secondary);
   color: var(--color-white);
 }
 
@@ -111,7 +104,7 @@ a, a:visited, a:hover, a:active {
   outline: none !important;
   padding: var(--spacing-sm);
   border: 0px;
-  background: var(--color-quaternary);
+  background: var(--color-primary);
   color: var(--color-white);
   cursor: pointer;
 }
