@@ -2,6 +2,9 @@
 
 This is a basic Express app written in TypeScript to demonstrate GET and POST functionality for a todo app. It utilizes Handlebars as a template engine and stores all todos in memory, as databases were not part of the scope for this project. The app includes 404 error handling and basic BEM styling for the frontend.
 
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmZocWN2NXdpMHVyamFmZ2plZmdnYjZkMGFoMW9qeXl2ZDYwdmg3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kNV6oRSnLJWnKXqswd/giphy.gif)
+
 ## Prerequisites
 
 Make sure you have Node.js and npm installed on your machine.
