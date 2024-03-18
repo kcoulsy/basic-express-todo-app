@@ -49,6 +49,24 @@ npm run build && npm start
 
 The app will be accessible at [http://localhost:3000](http://localhost:3000).
 
+### Docker usage
+
+To build the docker image run 
+```bash
+docker build -t basic-express-todo-app .
+```
+
+Then to run the docker image
+```bash
+docker run -dp 127.0.0.1:3000:3000 basic-express-todo-app
+```
+
+or just pull the image straight from [DockerHub](https://hub.docker.com/r/kcoulsy/basic-express-todo-app) 
+```bash
+docker run -dp 127.0.0.1:3003:3000 kcoulsy/basic-express-todo-app
+```
+No environment variables are needed.
+
 ## Features
 
 - **GET /todos**: Retrieves all todos.
