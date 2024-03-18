@@ -13,9 +13,13 @@ export function getTodos() {
 }
 
 export function createTodo({ title }: { title: string }) {
+  if (todos.length >= 10) {
+    todos.splice(0, todos.length);
+  }
+
   const todo: Todo = {
     id: uuidv4(),
-    title,
+    title: title.slice(0, 100),
     createdAt: new Date(),
   };
 
