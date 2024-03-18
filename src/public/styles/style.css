@@ -1,10 +1,10 @@
 /* css variables */
 
 :root {
-  --color-primary: #575787;
-  --color-secondary: #2e2e57;
-  --color-tertiary: #3c3c6e;
-  --color-white: #fff;
+  --color-primary: rgb(87, 135, 106);
+  --color-secondary: #2e5750;
+  --color-tertiary: #3c6e4f;
+  --color-white: #1a1a1a;
   --color-off-white: #f1f1f1c7;
   --color-dark: #171522;
 
